@@ -37,6 +37,7 @@ if (isset($_POST["update"])) {
         // Delete the old image file from the server
         if (file_exists($imageFile)) {
             unlink($imageFile);
+             
         }
 
         // Move the new uploaded image to the server
