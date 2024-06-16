@@ -1,60 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>logging page</title>
-  <link href="css/login.css" rel="stylesheet" type="text/css" />
-  <style type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="css/login.css">
+  <style>
     * {
-      padding:0;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #B2BEB5;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #B2BEB5;
+      padding: 10px 0;
+      text-align: center;
+      width: 100%;
+      margin-top: 55px;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .navbar img.logo {
+      width: 100px;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
       margin: 0;
     }
 
-    header h3 {
-      background: lightgray;
+    .navbar ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .navbar ul li a:hover {
+      color: goldenrod;
+    }
+
+    .center {
+      background: white;
+      width: 300px;
+      margin: 20px auto;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center horizontally */
+    }
+
+    .center h1 {
       text-align: center;
-      padding: 10px 0px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .center p {
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .center input[type="text"],
+    .center input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .buttons-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .center button {
+      width: calc(50% - 5px); /* Adjust button width */
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #333;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .center button:hover {
+      background: goldenrod;
+    }
+
+    footer {
+      background-color: #0c0b0b;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0;
+      width: 100%;
+      bottom: 0;
+      position: absolute;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Wedding Hotel Reservation</h1>
+    <h1>Hotel Reservation System</h1>
   </header>
+
+  <div class="center">
+    <form>
+      <h1>Login</h1>
+      <p>Username</p>
+      <input type="text" name="username" placeholder="Enter your name">
+      <p>Password</p>
+      <input type="password" name="password" placeholder="Enter password">
+      <div class="buttons-container">
+        <button class="log">Login</button>
+        <button class="create">Create Account</button>
+      </div>
+    </form>
+  </div>
+
   <div class="navbar">
-    <img src="images/logo.png" class="logo">
+    <img src="images/logo.png" class="logo" alt="Hotel Logo">
     <ul>
-      <li><a href="home.html">home</a></li>
-      <li><a href="venue.html">venues</a></li>
-      <li><a href="pkg.html">packages</a></li>
-      <li><a href="contactus.html">contact us</a></li>
-      <li><a href="gallary.html">Gallery</a></li>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="venue.html">Venues</a></li>
+      <li><a href="pkg.html">Packages</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
       <li><a href="log.html">Login</a></li>
-</div>
-  <box>
+    </ul>
+  </div>
 
-    <div class="center">
-      <form>
-        <h1>Login</h1>
-        <p>user name</p>
-        <input type="text" name="" placeholder="enter your name">
 
-        <p>password</p>
-        <input type="text" name="" placeholder="Enter password" </form>
-      </form>
-      
-      <button class="log">logging</button><br>
-      
-      <button class="create">create account</button>
-      
-      
 
-    </div>
-  </box>
-
+  <footer>
+    <p>&copy; 2023 Hotel Reservation System</p>
+  </footer>
 </body>
 
 </html>
